@@ -122,4 +122,4 @@ A função `tocarSequencia()` ficou bem resolvida: ela calcula a velocidade atua
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT) — uso livre para fins educacionais, com créditos ao autor original.
+Este projeto está licenciado sob a [Licença MIT](https://github.com/luizgao3/atividade-dom-patrulha-orbital-genius-espacial/blob/main/LICENSE#L1C1-L21C10) — uso livre para fins educacionais, com créditos ao autor original.
