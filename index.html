@@ -3,33 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encontre o Diferente</title>
+  <title>Patrulha Orbital — Genius Espacial</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <h1>🔍 Encontre o Diferente</h1>
+  <header class="cabecalho">
+    <h1>🛰️ Patrulha Orbital</h1>
+    <p class="subtitulo">Memorize a sequência de planetas antes que a transmissão caia.</p>
+    <button id="btn-modo-escuro" class="botao-secundario" aria-label="Alternar modo escuro">🌙 Modo escuro</button>
+  </header>
 
-  <div id="placar">
-    <span>Jogador: <strong id="nomeJogador">—</strong></span>
-    <span>Pontuação: <strong id="pontuacao">0</strong></span>
-    <span>Rodada: <strong id="rodada">0</strong></span>
-    <span>Tempo: <strong id="tempo">30</strong>s</span>
-  </div>
+  <main class="container-jogo">
 
-  <div id="grid"></div>
+    <!-- TELA INICIAL -->
+    <section id="tela-inicial" class="painel">
+      <h2>Antes de iniciar a missão</h2>
+      <label for="input-nome">Identificação do piloto:</label>
+      <input type="text" id="input-nome" placeholder="Digite seu nome" maxlength="20">
+      <button id="btn-jogar" class="botao-primario">🚀 Jogar</button>
 
-  <div id="tela-inicial">
-    <h2>🎉 Jogo para Festa!</h2>
-    <input type="text" id="inputNome" placeholder="Digite seu nome">
-    <button id="btnJogar">Jogar</button>
-  </div>
+      <div class="ranking-area">
+        <h3>🏆 Ranking dos melhores pilotos</h3>
+        <ol id="lista-ranking"></ol>
+      </div>
+    </section>
 
-  <div id="tela-fim" class="escondido">
-    <h2>Fim de jogo!</h2>
-    <p id="mensagemFim"></p>
-    <button id="btnReiniciar">Jogar Novamente</button>
-  </div>
+    <!-- TELA DO JOGO -->
+    <section id="tela-jogo" class="painel escondido">
+      <div class="painel-status">
+        <span id="status-jogador">Piloto: —</span>
+        <span id="status-pontos">Pontos: 0</span>
+        <span id="status-vidas">Vidas: ❤️❤️❤️</span>
+        <span id="status-rodada">Rodada: 0</span>
+      </div>
+
+      <p id="mensagem-jogo" class="mensagem">Observe a sequência...</p>
+
+      <div id="grid-planetas" class="grid-planetas"></div>
+    </section>
+
+    <!-- TELA DE FIM DE JOGO -->
+    <section id="tela-fim" class="painel escondido">
+      <h2>📡 Transmissão perdida</h2>
+      <p id="resultado-final"></p>
+      <button id="btn-jogar-novamente" class="botao-primario">🔁 Jogar novamente</button>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Atividade #09 — DOM com JavaScript · Desenvolvido por Luiz Gabriel Abreu Oliveira</p>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
